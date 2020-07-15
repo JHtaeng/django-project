@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %} Django Bookmark Detail {% endblock %}
+{% block title %} bookmark_detail.html {% endblock %}
 
 {% block header %}
 <header class="masthead" style="background-image: url({% static 'img/city-bg.jpg' %})">
@@ -21,15 +21,22 @@
 {% endblock %}
 
 {% block content %}
-<div id="content">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-md-10 mx-auto">
+            <div id="content">
 
-    <h1>{{ object.title }}</h1>
+                <h1>{{ object.title }}</h1>
 
-    <ul>
-        <li>URL: <a href="{{object.url}}"> {{object.url}}</a> </li>
-    </ul>
+                <ul>
+                    <li>URL: <a href="{{object.url}}"> {{object.url}}</a> </li>
+                </ul>
 
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock %}
 
 {% block extra-script %}{% endblock %}
