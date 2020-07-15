@@ -1,10 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>post_detail</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Django Post Detail {% endblock %}
+
+{% block header %}
+<header class="masthead" style="background-image: url({% static 'img/moon-bg.jpg' %})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Content</h1>
+                <span class="subheading">포스트 상세 페이지</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+{% endblock %}
+
+{% block content %}
 
 <h2>{{ object.title }}</h2>
 
@@ -23,5 +39,38 @@
     {{ object.content | linebreaks }}
 </div>
 
+{% endblock %}
+
+{% block extra-script %}{% endblock %}
+
+
+
+<!--
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>post_detail</title>
+</head>
+<body>
+
+<h2>{{ object.title }}</h2>
+
+<p>
+    {% if object.get_previous %}
+    <a href="{{ object.get_previous.get_absolute_url}}" title="View previous post">
+        &laquo;&#45;&#45; {{object.get_previous}}
+    </a>
+    {% endif %}
+</p>
+
+<p>{{object.modify_dt|date:"j F Y"}}</p>
+<br>
+
+<div>
+    {{ object.content | linebreaks }}
+</div>
+
 </body>
-</html>
+</html>-->
