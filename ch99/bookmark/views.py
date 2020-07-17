@@ -40,3 +40,5 @@ class BookmarkDeleteView(OwnerOnlyMixin, DeleteView):
 
 
 
+
+

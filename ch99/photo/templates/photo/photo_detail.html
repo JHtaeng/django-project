@@ -42,6 +42,8 @@
                     <a href="{% url 'photo:album_detail' object.album.id %}"> {{ object.album.name }}</a>
                 </p>
             <a href="{% url 'photo:index'%}"><span class="btn btn-outline-primary">Main</span></a>
+            <a href="{% url 'photo:photo_add'%}"><span class="btn btn-outline-primary">추가하기</span></a>
+            <a href="{% url 'photo:photo_change'%}"><span class="btn btn-outline-primary">수정하기</span></a>
         </ul>
     </div>
 
