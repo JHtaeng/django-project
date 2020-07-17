@@ -58,8 +58,27 @@
             </div>
 
             {% endfor %}
-            <a href="{% url 'photo:album_add'%}"><span class="btn btn-outline-primary">앨범 추가</span></a>
-            <a href="{% url 'photo:album_change'%}"><span class="btn btn-outline-primary">앨범 수정</span></a>
+
+            <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  추가하기
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                  <a class="dropdown-item" href="{% url 'photo:album_add'%}">앨범</a>
+                  <a class="dropdown-item" href="{% url 'photo:photo_add'%}">사진</a>
+                </div>
+            </div>
+
+             <div class="btn-group" role="group">
+                <button id="btnGroupDrop1" type="button" class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  수정하기
+                </button>
+                <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                  <a class="dropdown-item" href="{% url 'photo:album_change'%}">앨범</a>
+                  <a class="dropdown-item" href="{% url 'photo:photo_change'%}">사진</a>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
